@@ -18,3 +18,7 @@ Route::get('/xxx', 'AAAController@bbb');
 の add Action に、admin/profile/edit にアクセスしたら ProfileController のedit Actionに
 割り当てるように設定してください。*/
 
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('profile/create', 'Admin\ProfileController@add');
+    Route::get('profile/edit', 'Admin\profileController@edit');
+});
