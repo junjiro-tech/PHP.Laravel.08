@@ -44,12 +44,12 @@ class ProfileController extends Controller
 //課題5.Admin/ProfileControllerに、以下のadd, create, edit, update それぞれのActionを追加してみましょう。
     public function add()
     {
-        return view('admin.profile.create');
+        return view('admin.profile.create2');
     }
     
     public function create()
     {
-        return redirect('admin.profile.create');
+        return redirect('admin.profile.create2');
     }
     
     public function edit()
