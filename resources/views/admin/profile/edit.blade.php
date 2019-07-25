@@ -1,17 +1,16 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="view-port" content="width=device-width, initial-scale=1">
-        
-       <title>Profile</title>
-    </head>
-    <body>
-    <h1>Profile作成画面</h1>
-    <h2>課題1.Viewは何をするところでしょうか。簡潔に説明してみてください。</h2>
-    <p>Controllerの指示によって、アクセスしてきたuserのブラウザに表示するデータを生成する所</p>
-    <h3>課題2.プログラマーがhtmlを書かずにPHPなどのプログラミング言語やフレームワークを使う必要があるのはどういった理由でしょうか。</h3>
-    <p>loginしたuser毎にwebpageにuser名を表示したい場合やmodel経由でdatebaseからdateを取得し、それをhtmlファイルに記載してuserに渡す必要があるため</p>
-    </body>
-</html>
+{{-- news/profile.blade.phpを読み込む --}}
+@extends('layouts.admin')
+
+{{-- prodile.blade.phpの@yield('title')に'プロフィールの新規作成'を埋め込む -- }}
+@section('title', 'プロフィールの新規作成')
+
+{{-- profile.blade.phpの@yield('content')に以下のタグを埋め込む --}}
+@section('content')
+      <div class="container">
+          <div class="row">
+              <div class="col-md-8 mx-auto">
+                  <h2>Myプロフィール</h2>
+              </div>
+          </div>
+      </div>
+@endsection

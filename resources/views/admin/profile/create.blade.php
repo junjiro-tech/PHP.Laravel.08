@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="view-port" content="width=device-width, initial-scale=1">
         
-        <title>Profile</title>
+       <title>Profile</title>
     </head>
     <body>
     <h1>Profile作成画面</h1>

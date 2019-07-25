@@ -6,9 +6,9 @@
 
 {{-- admin.blade.phpの@yield('content')に以下のタグを埋め込む --}}
 @section('content')
-      <div class="container">
-          <div class="row">
-              <div class="col-md-8 mx-auto">
+      <div class="container"> {{-- 格納する --}}
+          <div class="row"> {{-- rowという入れ物 --}}
+              <div class="col-md-8 mx-auto"> {{-- colという入れ物,midiumサイズ8/12使っている --}}
                   <h2>ニュース新規作成</h2>
                   <from action="{{ action('Admin\NewsController@create') }}" method="post" enctype="multipart/from-data">
                         

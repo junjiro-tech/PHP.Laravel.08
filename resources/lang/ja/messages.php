@@ -7,4 +7,5 @@ return [
     'E-MailAddress' => 'メールアドレス',
     'Password' => 'パスワード',
     'RemenberMe' => 'ログイン情報を記憶する',
+    'Logout' => 'ログアウト',
     ];
