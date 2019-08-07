@@ -10,7 +10,7 @@
           <div class="row">
               <div class="col-md-8 mx-auto">
                   <h2>Myプロフィール</h2>
-                  <from action="{{ action('Admin\ProfileController@create') }}" method="post" enctype="multipart/from-data">
+                  <form action="{{ action('Admin\ProfileController@create2') }}" method="post" enctype="multipart/form-data">
                   @if (count($errors) > 0)
                         <ul>
                               @foreach($errors->all() as $e)
@@ -39,9 +39,11 @@
                         <div class="form-group row">
                               <label class="col-md-2" for="body">自己紹介欄(introduction)</label>
                               <div class="col-md-10">
-                                    <textarea class="form-control" name="body" rouws="20">{{ old('body')}}</textarea>
+                                    <textarea class="form-control" name="introduction" rouws="20">{{ old('body')}}</textarea>
                               </div>
                         </div>
+                        {{ csrf_field() }}
+                  </form>
               </div>
           </div>
       </div>
@@ -72,4 +74,23 @@
 
 課題6. webpack.mix.jsを編集して、profile.scss をコンパイルするように編集してみましょう。
 課題7. 7. ができたら、実際に npm run watch コマンドでコンパイルしてみましょう。
-課題8. 8. ができたら、ブラウザで /admin/profile/createでプロフィール作成画面が表 示されるか確認しましょう。--}}
+課題8. 8. ができたら、ブラウザで /admin/profile/createでプロフィール作成画面が表 示されるか確認しましょう。
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="view-port" content="width=device-width, initial-scale=1">
+        
+       <title>Profile</title>
+    </head>
+    <body>
+    <h1>Profile作成画面</h1>
+    <h2>課題1.Viewは何をするところでしょうか。簡潔に説明してみてください。</h2>
+    <p>Controllerの指示によって、アクセスしてきたuserのブラウザに表示するデータを生成する所</p>
+    <h3>課題2.プログラマーがhtmlを書かずにPHPなどのプログラミング言語やフレームワークを使う必要があるのはどういった理由でしょうか。</h3>
+    <p>loginしたuser毎にwebpageにuser名を表示したい場合やmodel経由でdatebaseからdateを取得し、それをhtmlファイルに記載してuserに渡す必要があるため</p>
+    </body>
+</html>
+--}}
