@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class profile extends Model
 {
-    protected $guarded = array('id');
+    protected $guarded = ['id'];
     
     //以下を追記
     public static $rules = array(
@@ -15,4 +15,6 @@ class profile extends Model
         'hobby' => 'required',
         'introduction' => 'required',
         );
+        
 }
+

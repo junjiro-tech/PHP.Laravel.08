@@ -1,10 +1,5 @@
-{{-- news/profile.blade.phpを読み込む --}}
-@extends('layouts.admin')
-
-{{-- prodile.blade.phpの@yield('title')に'プロフィールの新規作成'を埋め込む -- }}
-@section('title', 'プロフィールの新規作成')
-
-{{-- profile.blade.phpの@yield('content')に以下のタグを埋め込む --}}
+@extends('layouts.profile')
+@section('title', 'Laravel')
 @section('content')
       <div class="container">
           <div class="row">
@@ -20,30 +15,38 @@
                         </ul>
                         @endif
                         <div class="form-group row">
-                              <label class="col-md-2" for="title">氏名(name)</label>
+                              <label class="col-md-2" for="body">氏名</label>
                               <div class="col-md-10">
                                     <input type="text" class="form-control" name="name" value="{{ old('name') }}">
                               </div>
                         </div>
+                        <p>性別</p>
                         <div class="form-group row">
-                              <label class="col-md-2" for="title">性別(gender)</label>
+                              <label class="col-md-2" for="body">男</label>
                               <div class="col-md-10">
-                                    <input type="text" class="form-control" name="gender" value="{{ old('gender') }}">
+                                    <input type="radio" name="gender"> {{ old('gender') }}
                               </div>
                         </div>
                         <div class="form-group row">
-                              <label class="col-md-2" for="title">趣味(hobby)</label>
+                              <label class="col-md-2" for="body">女</label>
+                              <div class="col-md-10">
+                                    <input type="radio" name="gender"> {{ old('gender') }}
+                              </div>
+                        </div>
+                        <div class="form-group row">
+                              <label class="col-md-2" for="title">趣味</label>
                               <div class="col-md-10">
                                     <input type="text" class="form-control" name="hobby" value="{{ old('hobby') }}">
                               </div>
                         </div>
                         <div class="form-group row">
-                              <label class="col-md-2" for="body">自己紹介欄(introduction)</label>
+                              <label class="col-md-2" for="title">自己紹介</label>
                               <div class="col-md-10">
-                                    <textarea class="form-control" name="introduction" rouws="20">{{ old('body')}}</textarea>
+                                    <textarea class="form-control" name="introduction" rouws="10">{{ old('introduction')}}</textarea>
                               </div>
                         </div>
                         {{ csrf_field() }}
+                         <input type="submit" class="btn btn-primary" value="投稿">
                   </form>
               </div>
           </div>
