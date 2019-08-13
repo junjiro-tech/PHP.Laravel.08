@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Profilehistory extends Model
 {
-    protected $guarded = array('id');
+    protected $guarded = ['id'];
 
     // 以下を追記
     public static $rules = array(
@@ -15,7 +15,7 @@ class Profilehistory extends Model
     );
 
     
-    public function profilehistories()
+    public function Profilehistories()
     {
       return $this->hasMany('App\Profilehistory');
 

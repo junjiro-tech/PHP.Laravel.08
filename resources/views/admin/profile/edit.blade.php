@@ -16,32 +16,40 @@
                         <div class="form-group row">
                               <label class="col-md-2" for="body">氏名</label>
                               <div class="col-md-10">
-                                    <input type="text" class="form-control" name="name" value="{{ $profile_form->body }}">
+                                    <input type="text" class="form-control" name="name" value="{{ $profile_form->name }}">
                               </div>
                         </div>
                         <p>性別</p>
                         <div class="form-group row">
                               <label class="col-md-2" for="body">男</label>
                               <div class="col-md-10">
-                                    <input type="radio" name="gender"> {{ $profile_form->body }}</textarea>
+                                    @if ($profile_form->gender == "男")
+                                    <input type="radio" name="gender" value="男" checked="checked">
+                                    @else 
+                                        <input type="radio" name="gender" value="男">
+                                    @endif    
                               </div>
                         </div>
                         <div class="form-group row">
                               <label class="col-md-2" for="body">女</label>
                               <div class="col-md-10">
-                                    <input type="radio" name="gender"> {{ $profile_form->body }}</textarea>
+                                    @if ($profile_form->gender == "女")
+                                    <input type="radio" name="gender" value="女" checked="checked">
+                                    @else
+                                    <input type="radio" name="gender" value="女">
+                                    @endif
                               </div>
                         </div>
                         <div class="form-group row">
                               <label class="col-md-2" for="title">趣味</label>
                               <div class="col-md-10">
-                                    <input type="text" class="form-control" name="hobby" value="{{ $profile_form->body }}">
+                                    <input type="text" class="form-control" name="hobby" value="{{ $profile_form->hobby }}">
                               </div>
                         </div>
                         <div class="form-group row">
                               <label class="col-md-2" for="title">自己紹介</label>
                               <div class="col-md-10">
-                                    <textarea class="form-control" name="introduction" rouws="10">{{ $profile_form->title }}</textarea>
+                                    <textarea class="form-control" name="introduction" rouws="10">{{ $profile_form->introduction }}</textarea>
                               </div>
                         </div>
                     
