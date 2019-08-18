@@ -2,9 +2,12 @@
 namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Auth;
 use App\Profile;
 use App\Profilehistory;
 use Carbon\Carbon;
+
+
 class ProfileController extends Controller
 {
   public function add()
@@ -21,7 +24,9 @@ class ProfileController extends Controller
       $profile = new Profile;
       $form = $request->all();
       unset($form['_token']);
+      $profile->user_id = Auth::user()->id;
       $profile->fill($form)->save();
+    
       
       return redirect('admin/profile/create');
   }
