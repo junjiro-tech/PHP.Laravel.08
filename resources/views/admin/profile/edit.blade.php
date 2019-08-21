@@ -41,6 +41,12 @@
                               </div>
                         </div>
                         <div class="form-group row">
+                              <label class="col-md-2" for="title">電話番号</label>
+                              <div class="col-md-10">
+                                    <input type="tel" class="form-control" name="tell" value="{{ $profile_form->tell }}">
+                              </div>
+                        </div>
+                        <div class="form-group row">
                               <label class="col-md-2" for="title">趣味</label>
                               <div class="col-md-10">
                                     <input type="text" class="form-control" name="hobby" value="{{ $profile_form->hobby }}">
